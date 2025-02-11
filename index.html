@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fortune teller</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+    <h1>Do you need a sign?</h1>
+    <button onclick="suggestItem()"><img src="1.png"></button>
+    <div class="item-box" id="fashionItem">Click on a cookie!</div>
+    <script>
+        const fashionItems = [
+            "An unexpected message will brighten your day", 
+            "Trust the process—something amazing is unfolding", 
+            "A small risk will lead to a big reward", 
+            "Someone is thinking about you right now", 
+            "The next song you hear will have a hidden message for you", 
+            "A door you thought was closed is about to reopen", 
+            "Laughter will solve a problem you’ve been overthinking", 
+            "You will stumble upon something valuable—keep your eyes open", 
+            "A spontaneous decision will become a core memory",
+            "Your lucky number will appear three times today—watch for it!"
+        ];
+
+        function suggestItem() {
+            let randomIndex = Math.floor(Math.random() * fashionItems.length);
+            document.getElementById("fashionItem").innerText = fashionItems[randomIndex];
+        }
+    </script>
+    </div>
+</body>
+</html>
